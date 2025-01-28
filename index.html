@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Quote API Example</title>
+    <title>Quote Generator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,6 +13,24 @@
 
     <!-- Custom CSS for the button -->
     <style>
+      .styled-text {
+  
+  font-family: 'Arial', sans-serif; /* Change font if desired */
+  font-size: 1.2rem; /* Adjust size of the text */
+  margin-top: 50px; /* Adds space above the text, moving it down */
+  padding-top: 50px; /* Adds space inside the container */
+  letter-spacing: 1px; /* Slight spacing between letters */
+   /* Muted color (gray) */
+  text-align: center; /* Center text alignment */
+  margin-top: 20px; /* Add space above the text */color: #6c757d;
+  font-weight: normal; /* Use normal weight for the muted text */
+}
+
+/* Optional: Add hover effect for the text */
+.styled-text:hover {
+   /* Slightly darker color on hover */color: #adb5bd;
+  cursor: pointer; /* Change cursor on hover */
+}
       /* Custom styling for the refresh button */
       .btn-refresh {
         
@@ -48,6 +66,7 @@
           
           <!-- Refresh Button with custom class -->
           <button class="btn btn-refresh mt-4" onclick="window.location.reload();">Get New Quote</button>
+           <h6 class="text-muted styled-text"> Developed by Debasish... </h6>
         </div>
       </div>
     </div>
