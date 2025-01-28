@@ -1,0 +1,59 @@
+body {
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    height: 100vh; /* Ensure the body takes full viewport height */
+    box-shadow: 0 0 10px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000; /* Red glowing effect for body */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  body:hover {
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000; /* Stronger red glow on hover */
+  }
+  
+  .glowing-card {
+    background-color: #1a1a1a;
+    border: 2px solid #ff0000; /* Red border */
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000; /* Red glowing effect */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glowing-card:hover {
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000; /* Stronger red glowing effect on hover */
+  }
+  
+  #quote {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000; /* Red text color for the quote */
+  }
+  
+  #author {
+    font-size: 1.2rem;
+    color: #ff0000; /* Red text color for the author */
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    color: #fff;
+  }
+  
+  .card-text {
+    color: #ff0000; /* Red text for the description */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the content is centered vertically */
+  }
+  

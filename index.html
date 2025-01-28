@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quote API Example</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/image.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom CSS for the button -->
+    <style>
+      /* Custom styling for the refresh button */
+      .btn-refresh {
+        
+        color: rgb(225, 216, 216);
+        border: 2px solid #ff0000;
+        border-radius: 25px; /* Round corners */
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+        transition: all 0.3s ease;
+        background-color: #000000; /* Black background on hover */
+      }
+
+      .btn-refresh:hover {
+        background-color: #ff0000; /* Red background */
+        color:black; /* Red text on hover */
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000; /* Stronger red glowing effect */
+      }
+
+      .btn-refresh:focus {
+        outline: none; /* Remove default focus outline */
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+    <div class="d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card glowing-card" style="width: 50rem;">
+        <div class="card-body text-center">
+          <h5 class="card-title" id="quote" class="ani">THANK YOU GOD</h5>
+          <p class="card-text" id="author"></p>
+          
+          <!-- Refresh Button with custom class -->
+          <button class="btn btn-refresh mt-4" onclick="window.location.reload();">Get New Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
