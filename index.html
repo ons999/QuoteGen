@@ -2,88 +2,100 @@
 <html lang="en">
   <head>
     <title>Quote Generator</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/image.png"/>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Custom CSS for the button -->
     <style>
-      ::section {
-        background-color:red;
-        color:black;
-      }
-      .styled-text {
-  
-  font-family: 'Arial', sans-serif; /* Change font if desired */
-  font-size: 1.2rem; /* Adjust size of the text */
-  margin-top: 50px; /* Adds space above the text, moving it down */
-  padding-top: 50px; /* Adds space inside the container */
-  letter-spacing: 1px; /* Slight spacing between letters */
-   /* Muted color (gray) */
-  text-align: center; /* Center text alignment */
-  margin-top: 20px; /* Add space above the text */color: #6c757d;
-  font-weight: normal; /* Use normal weight for the muted text */
-}
-
-/* Optional: Add hover effect for the text */
-.styled-text:hover {
-   /* Slightly darker color on hover */color: #adb5bd;
-  cursor: pointer; /* Change cursor on hover */
-}
-      /* Custom styling for the refresh button */
       .btn-refresh {
-        
         color: rgb(225, 216, 216);
         border: 2px solid #ff0000;
-        border-radius: 25px; /* Round corners */
+        border-radius: 25px;
         padding: 10px 20px;
         font-size: 1.2rem;
         font-weight: bold;
         text-transform: uppercase;
         box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
         transition: all 0.3s ease;
-        background-color: #000000; /* Black background on hover */
+        background-color: #000000;
       }
 
       .btn-refresh:hover {
-        background-color: #ff0000; /* Red background */
-        color:black; /* Red text on hover */
-        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000; /* Stronger red glowing effect */
+        background-color: #ff0000;
+        color: black;
+        box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 70px #ff0000;
       }
+      @media print {
+  body {
+    background: white !important; /* White background */
+    color: black !important; /* Black text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center content vertically */
+  }
 
-      .btn-refresh:focus {
-        outline: none; /* Remove default focus outline */
-      }
-          .quote {
-        font-size: 2rem;
-        color:red;
-        text-decoration: underline;
-        text-decoration-color: #ff0000; /* Red underline */
-      }
+  .btn-refresh, h6 {
+    display: none !important; /* Hide buttons and footer text */
+  }
+
+  .card {
+    box-shadow: none !important; /* Remove shadow */
+    border: 2px solid black !important; /* Optional: Keep a visible border */
+    width: 50rem !important; /* Keep original width */
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .quote {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: black; /* Keep underline */
+    color: black;
+  }
+
+  h3 {
+    font-size: 1.8rem; /* Keep similar size */
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-style: italic; /* Keep author text stylish */
+  }
+}
+
     </style>
   </head>
   <body class="bg-dark text-light">
     <div class="d-flex justify-content-center align-items-center min-vh-100">
       <div class="card glowing-card" style="width: 50rem;">
         <div class="card-body text-center">
-       <!-- Heading inside the card with underline -->
           <h1 class="text-center quote">Quote of the Day</h1>
           <h3 class="card-title" id="quote" class="ani">Please Wait...</h3>
           <p class="card-text" id="author"></p>
           
-          <!-- Refresh Button with custom class -->
+          <!-- Refresh and Print Buttons -->
           <button class="btn btn-refresh mt-4" onclick="window.location.reload();">Get New Quote</button>
-           <h6 class="text-muted styled-text"> Developed by Debasish... </h6>
+          <button class="btn btn-refresh mt-3" onclick="printPage()">Print Quote</button>
+
+          <h6 class="text-muted styled-text">Developed by Debasish...</h6>
         </div>
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
     <script src="js/main.js" type="module"></script>
+    <script>
+      function printPage() {
+        window.print();
+      }
+    </script>
   </body>
 </html>
